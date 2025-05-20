@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Радиолюбитель - Дополнительные школьные занятия</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f4f8;
+    }
+    header {
+      background-color: #0a3d62;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin-bottom: 10px;
+    }
+    header p.slogan {
+      font-style: italic;
+      margin-top: 0;
+      color: #cce6ff;
+    }
+    nav {
+      background-color: #1e5a87;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 8px 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .content {
+      padding: 20px;
+    }
+    .tab {
+      display: none;
+    }
+    .tab.active {
+      display: block;
+    }
+    img.banner {
+      width: 100%;
+      max-height: 300px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #999;
+    }
+    th, td {
+      padding: 8px;
+      text-align: center;
+    }
+    footer {
+      background-color: #0a3d62;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Радиолюбитель</h1>
+    <p class="slogan">Открываем мир радиосвязи вместе!</p>
+  </header>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Ham_radio_station.jpg" alt="Ham radio" class="banner">
+
+  <nav>
+    <a href="#" onclick="showTab('vhf')">VHF/UHF связь</a>
+    <a href="#" onclick="showTab('hf')">КВ (HF) связь</a>
+    <a href="#" onclick="showTab('digital')">Цифровая радиосвязь</a>
+    <a href="#" onclick="showTab('morse')">Азбука Морзе</a>
+    <a href="#" onclick="showTab('schedule')">Программа и расписание</a>
+    <a href="#" onclick="showTab('books')">Список литературы</a>
+  </nav>
+
+  <div class="content">
+    <div id="vhf" class="tab active">
+      <h2>VHF/UHF связь</h2>
+      <p>Связь на ультракоротких волнах используется для локального общения, чаще всего с использованием портативных радиостанций. Учащиеся изучают антенны, частоты и технику вызова.</p>
+    </div>
+    <div id="hf" class="tab">
+      <h2>КВ (HF) связь</h2>
+      <p>Связь на коротких волнах позволяет устанавливать контакты на большие расстояния. Обсуждаются особенности распространения волн, солнечная активность, виды модуляции.</p>
+    </div>
+    <div id="digital" class="tab">
+      <h2>Цифровая радиосвязь</h2>
+      <p>Цифровые виды связи (например, FT8, RTTY) всё более популярны. Школьники знакомятся с программным обеспечением и принципами передачи цифровых сигналов.</p>
+    </div>
+    <div id="morse" class="tab">
+      <h2>Азбука Морзе</h2>
+      <p>Классический метод радиосвязи, используемый с конца XIX века. Изучение включает тренировку слуха, отправку и приём сигналов.</p>
+    </div>
+    <div id="schedule" class="tab">
+      <h2>Программа кружка и расписание</h2>
+      <ul>
+        <li>Основы радиосвязи и безопасности</li>
+        <li>Работа с оборудованием (трансиверы, антенны)</li>
+        <li>Обучение азбуке Морзе</li>
+        <li>Цифровые протоколы связи</li>
+        <li>Практические занятия и соревнования</li>
+      </ul>
+      <h3>Расписание занятий</h3>
+      <table>
+        <tr>
+          <th>День недели</th>
+          <th>Группа 1 (начинающие)</th>
+          <th>Группа 2 (продвинутые)</th>
+          <th>Группа 3 (практика)</th>
+        </tr>
+        <tr>
+          <td>Понедельник</td>
+          <td>15:00 - 16:00</td>
+          <td>-</td>
+          <td>17:00 - 18:30</td>
+        </tr>
+        <tr>
+          <td>Среда</td>
+          <td>15:00 - 16:00</td>
+          <td>16:30 - 17:30</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>Пятница</td>
+          <td>-</td>
+          <td>16:00 - 17:00</td>
+          <td>17:30 - 19:00</td>
+        </tr>
+      </table>
+    </div>
+    <div id="books" class="tab">
+      <h2>Список рекомендуемой литературы</h2>
+      <ul>
+        <li>Основы радиосвязи – В. И. Богомолов</li>
+        <li>Курс молодого радиолюбителя – А. Гончаров</li>
+        <li>Цифровая радиосвязь – С. Громов</li>
+        <li>Азбука Морзе для начинающих – Н. Власов</li>
+        <li>Антенны и передающие устройства – В. М. Колесников</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    <p>Телефон: 8(999)999-99-99 | Адрес: г. Москва, школа №1</p>
+    <p>&copy; 2025 Кружок «Радиолюбитель»</p>
+  </footer>
+
+  <script>
+    function showTab(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
